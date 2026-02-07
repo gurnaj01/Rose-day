@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Rose Day 🌹</title>
+
+<style>
+  body {
+    background: linear-gradient(to bottom right, #ffe6f0, #fff7fb);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding: 25px;
+    color: #7a003c;
+  }
+
+  .page {
+    display: none;
+    animation: fade 1s ease;
+  }
+  .page.active {
+    display: block;
+  }
+
+  @keyframes fade {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  .rose {
+    font-size: 85px;
+    margin: 15px 0;
+  }
+
+  .box {
+    background: #ffffffcc;
+    padding: 22px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  }
+
+  button {
+    margin: 10px;
+    padding: 12px 26px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #d1005d;
+    color: white;
+  }
+
+  button:hover {
+    background: #a80048;
+  }
+
+  .from {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 18px;
+  }
+
+  audio {
+    display: none;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- Background Music -->
+<audio autoplay loop>
+  <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Keys_of_Moon/Emotional_Music/Keys_of_Moon_-_03_-_Tenderness.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <div class="rose">🌹</div>
+  <h1>Happy Rose Day</h1>
+  <div class="box">
+    <p><b>Gurleen 💖</b></p>
+    <p>This rose isn’t just a flower.</p>
+    <p>It carries my feelings.</p>
+    <p>Will you accept my rose? 🌹</p>
+    <button onclick="go(2)">Yes 🥰</button>
+    <button onclick="go(2)">Always 💕</button>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <div class="rose">😊</div>
+  <h1>Quick question</h1>
+  <div class="box">
+    <p>While reading this…</p>
+    <p>did you smile even a little?</p>
+    <button onclick="go(3)">Yes 🙈</button>
+    <button onclick="go(3)">A lot 😄</button>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <div class="rose">☁️</div>
+  <h1>Imagine this</h1>
+  <div class="box">
+    <p>If we were together right now,</p>
+    <p>what would you choose?</p>
+    <button onclick="go(4)">Long talks 💬</button>
+    <button onclick="go(4)">Quiet moments 🤍</button>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <div class="rose">🌸</div>
+  <h1>Another one</h1>
+  <div class="box">
+    <p>If I gave you a real rose today,</p>
+    <p>would you keep it safely?</p>
+    <button onclick="go(5)">Of course 🌹</button>
+    <button onclick="go(5)">With care 💖</button>
+  </div>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="p5">
+  <div class="rose">🥹</div>
+  <h1>Honest question</h1>
+  <div class="box">
+    <p>Do you know how special</p>
+    <p>you are to me?</p>
+    <button onclick="go(6)">Yes 🤍</button>
+    <button onclick="go(6)">Tell me more 💌</button>
+  </div>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="p6">
+  <div class="rose">❤️</div>
+  <h1>A small promise</h1>
+  <div class="box">
+    <p>No matter the distance,</p>
+    <p>I’ll always respect you,</p>
+    <p>care for you, and choose you.</p>
+    <button onclick="go(7)">That’s sweet 🫶</button>
+  </div>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page" id="p7">
+  <div class="rose">🌹❤️</div>
+  <h1>Just for you</h1>
+  <div class="box">
+    <p>Happy Rose Day, Gurleen 💖</p>
+    <p>This may be virtual,</p>
+    <p>but my feelings are real.</p>
+    <div class="from">— Yours, Gurnaj</div>
+  </div>
+</div>
+
+<script>
+  function go(page) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+    document.getElementById('p' + page).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
